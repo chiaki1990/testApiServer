@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# 設定項目
+appDir="testApiServer"
+
+
 
 sudo amazon-linux-extras list | grep golang
 
@@ -10,7 +14,7 @@ amazon-linux-extras list | grep nginx
 sudo amazon-linux-extras install nginx1 -y
 
 # nginx 設定ファイル
-cp ~/testApiServer/nginx/nginx.conf /etc/nginx/nginx.conf
+cp ~/"${appDir}"/nginx/nginx.conf /etc/nginx/nginx.conf
 
 # nginx の設定確認
 # sudo nginx -t
@@ -18,7 +22,7 @@ cp ~/testApiServer/nginx/nginx.conf /etc/nginx/nginx.conf
 # nginx起動
 sudo systemctl restart nginx
 
-cd testApiServer 
+cd "${appDir}" 
 
 go build -o dist
 

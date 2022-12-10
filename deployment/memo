@@ -1,7 +1,0 @@
-手順
-
-ec2インスタンス作成
-８０番のセキュリティグループを開ける
-ssh経由でec2ログイン
-gitインストール&ソースコードダウンロード
-./testApiServer/deployment/deploy.sh
