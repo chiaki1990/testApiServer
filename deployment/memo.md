@@ -19,6 +19,5 @@ git clone "${repositoryUrl}"
 5. web サーバー、APP サーバー起動
 
 ```
-sudo chmod +x ./testApiServer/deployment/deploy.sh && sudo
-./testApiServer/deployment/deploy.sh
+sudo chmod +x ./testApiServer/deployment/deploy.sh && sudo ./testApiServer/deployment/deploy.sh
 ```

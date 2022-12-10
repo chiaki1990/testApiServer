@@ -13,8 +13,10 @@ amazon-linux-extras list | grep nginx
 
 sudo amazon-linux-extras install nginx1 -y
 
+cd "${appDir}"
+
 # nginx 設定ファイル
-cp ~/"${appDir}"/nginx/nginx.conf /etc/nginx/nginx.conf
+sudo cp ./nginx/nginx.conf /etc/nginx/nginx.conf
 
 # nginx の設定確認
 # sudo nginx -t
@@ -22,7 +24,7 @@ cp ~/"${appDir}"/nginx/nginx.conf /etc/nginx/nginx.conf
 # nginx起動
 sudo systemctl restart nginx
 
-cd "${appDir}" 
+ 
 
 go build -o dist
 
